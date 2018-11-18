@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -19,102 +18,104 @@
             android:layout_height="wrap_content"
             android:text="Pilih Matapelajaran"
             android:textAlignment="center"
-            android:textColor="@color/colorTextSecondary"
+            android:textColor="@color/colorTextPrimary"
             android:textSize="30sp" />
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="20dp"
             android:gravity="center">
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="5dp">
-
-                <Button
-                    android:id="@+id/btn_indonesia"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:autoText="false"
-                    android:background="@android:color/background_light"
-                    android:drawableTop="@drawable/ic_indonesia"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="Bahasa Indonesia"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorTextPrimary"
-                    android:textSize="12sp" />
-
-                <Button
-                    android:id="@+id/btn_english"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:background="@android:color/background_light"
-                    android:drawableTop="@drawable/ic_language"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="Bahasa Inggris"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorTextPrimary"
-                    android:textSize="12sp" />
-
-                <Button
-                    android:id="@+id/btn_math"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:background="@android:color/background_light"
-                    android:drawableTop="@drawable/ic_abacus"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="Matematika"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorTextPrimary"
-                    android:textSize="12sp" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="5dp">
+                android:layout_marginTop="5dp">
 
                 <Button
                     android:id="@+id/btn_biology"
+                    style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
-                    android:background="@android:color/background_light"
+                    android:background="@color/colorPrimary"
                     android:drawableTop="@drawable/ic_dna"
                     android:gravity="center"
                     android:padding="5dp"
                     android:text="Biologi"
                     android:textAlignment="center"
-                    android:textColor="@color/colorTextPrimary"
+                    android:textColor="@color/colorTextSecondary"
                     android:textSize="12sp" />
 
                 <Button
                     android:id="@+id/btn_physics"
+                    style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
-                    android:background="@android:color/background_light"
+                    android:background="@color/colorPrimary"
                     android:drawableTop="@drawable/ic_physics"
                     android:gravity="center"
                     android:padding="5dp"
                     android:text="Fisika"
                     android:textAlignment="center"
-                    android:textColor="@color/colorTextPrimary"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_math"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:drawableTop="@drawable/ic_abacus"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Matematika"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <Button
+                    android:id="@+id/btn_indonesia"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:drawableTop="@drawable/ic_indonesia"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Bahasa Indonesia"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_english"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:drawableTop="@drawable/ic_language"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Bahasa Inggris"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextSecondary"
                     android:textSize="12sp" />
 
             </TableRow>
