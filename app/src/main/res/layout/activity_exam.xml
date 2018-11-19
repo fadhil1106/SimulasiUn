@@ -22,21 +22,23 @@
             android:padding="5dp">
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/txt_question_number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Soal"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="@color/colorTextSecondary"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/txt_question"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="3dp"
                 android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-                android:textAlignment="textStart"
+                android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textColor="@color/colorTextSecondary" />
         </LinearLayout>
@@ -55,28 +57,28 @@
                 android:textColor="@color/colorTextPrimary" />
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/choice_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="A. Lorem Ipsum" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/choice_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="B. Lorem Ipsum" />
 
             <RadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/choice_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="C. Lorem Ipsum" />
 
             <RadioButton
-                android:id="@+id/radioButton4"
+                android:id="@+id/choice_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -84,7 +86,7 @@
         </RadioGroup>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btn_next_question"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Soal Berikut" />
