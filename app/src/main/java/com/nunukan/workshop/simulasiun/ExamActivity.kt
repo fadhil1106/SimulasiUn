@@ -6,10 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Button
-import android.widget.ProgressBar
-import android.widget.RadioButton
-import android.widget.TextView
+import android.widget.*
 import com.google.firebase.database.*
 
 class ExamActivity : AppCompatActivity() {
@@ -39,17 +36,23 @@ class ExamActivity : AppCompatActivity() {
 
         getQuestionList()
         btnNextQuestion.setOnClickListener {
-            checkAnswer()
-            showQuestion(questionNumber+1)
+            if (isAnswered()){
+                showQuestion(questionNumber+1)
+            }else{
+                Toast.makeText(this,"Jawab Dulu Pertanyaannya", Toast.LENGTH_SHORT).show()
+            }
         }
         btnFinish.setOnClickListener {
-            checkAnswer()
-            countScore()
-            val intent = Intent(this, ScoreActivity::class.java)
-            intent.putExtra("score", score)
-            intent.putExtra("totalQuestion", questionList.size)
-            startActivity(intent)
-            finish()
+            if (isAnswered()){
+                countScore()
+                val intent = Intent(this, ScoreActivity::class.java)
+                intent.putExtra("score", score)
+                intent.putExtra("totalQuestion", questionList.size)
+                startActivity(intent)
+                finish()
+            }else{
+                Toast.makeText(this,"Jawab Dulu Pertanyaannya", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
@@ -57,6 +60,7 @@ class ExamActivity : AppCompatActivity() {
     private fun getQuestionList(){
         val progressBar = findViewById<ProgressBar>(R.id.progressBar)
         progressBar.visibility = View.VISIBLE
+        btnNextQuestion.visibility  = View.GONE
         myRef = FirebaseDatabase.getInstance().reference
 
         val questionListListener = object : ValueEventListener{
@@ -65,13 +69,19 @@ class ExamActivity : AppCompatActivity() {
             }
 
             override fun onDataChange(snapshot: DataSnapshot){
-                snapshot.children.mapNotNullTo(questionList){
-                    it.getValue<QuestionModel>(QuestionModel::class.java)
+                if(snapshot.hasChildren()) {
+                    snapshot.children.mapNotNullTo(questionList) {
+                        it.getValue<QuestionModel>(QuestionModel::class.java)
+                    }
+                    questionList.shuffle()
+                    questionNumber = 0
+                    progressBar.visibility = View.GONE
+                    btnNextQuestion.visibility = View.VISIBLE
+                    showQuestion(questionNumber)
+                }else{
+                    finish()
+                    Toast.makeText(this@ExamActivity,"Belum Ada Soal",Toast.LENGTH_SHORT).show()
                 }
-                questionList.shuffle()
-                questionNumber = 0
-                showQuestion(questionNumber)
-                progressBar.visibility = View.GONE
             }
         }
         myRef.child("questionList/$subject").addListenerForSingleValueEvent(questionListListener)
@@ -103,13 +113,15 @@ class ExamActivity : AppCompatActivity() {
         }
     }
 
-    private fun checkAnswer(){
+    private fun isAnswered(): Boolean{
         when {
             txtChoiceA.isChecked -> answerChoose.add("${txtChoiceA.text}")
             txtChoiceB.isChecked -> answerChoose.add("${txtChoiceB.text}")
             txtChoiceC.isChecked -> answerChoose.add("${txtChoiceC.text}")
             txtChoiceD.isChecked -> answerChoose.add("${txtChoiceD.text}")
+            else -> return false
         }
+        return true
     }
 
     private fun countScore(){
