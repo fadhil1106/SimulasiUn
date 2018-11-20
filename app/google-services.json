@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "885637966677",
+    "firebase_url": "https://simulasiun-4a8c7.firebaseio.com",
+    "project_id": "simulasiun-4a8c7",
+    "storage_bucket": "simulasiun-4a8c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885637966677:android:a6e6da34f09dde60",
+        "android_client_info": {
+          "package_name": "com.nunukan.workshop.simulasiun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "885637966677-cr815glgv5hp2rt35tdj7in4evsdjcmt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nunukan.workshop.simulasiun",
+            "certificate_hash": "c23887088d09597cae72f437852ed838fce0dfbb"
+          }
+        },
+        {
+          "client_id": "885637966677-7tun1bngumcqq9ps3glh34b13va8vtmj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzHUZbESn_tiTUiVVFwJ45YBLUEz9yqKs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "885637966677-7tun1bngumcqq9ps3glh34b13va8vtmj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

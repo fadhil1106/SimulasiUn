@@ -25,15 +25,15 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/txt_score"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="00"
+            android:text="0/10"
             android:textAlignment="center"
             android:textSize="36sp" />
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/txt_comment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Score Comment"
@@ -55,7 +55,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/txt_correct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="99"
@@ -78,7 +78,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/txt_incorrect"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="99"
@@ -90,7 +90,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
