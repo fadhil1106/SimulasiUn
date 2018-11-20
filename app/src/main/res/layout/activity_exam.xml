@@ -46,7 +46,8 @@
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
 
             <TextView
                 android:id="@+id/textView4"
@@ -56,40 +57,55 @@
                 android:text="Jawab :"
                 android:textColor="@color/colorTextPrimary" />
 
-            <RadioButton
-                android:id="@+id/choice_a"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="A. Lorem Ipsum" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
-            <RadioButton
-                android:id="@+id/choice_b"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="B. Lorem Ipsum" />
+                <RadioButton
+                    android:id="@+id/choice_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="A. Lorem Ipsum" />
 
-            <RadioButton
-                android:id="@+id/choice_c"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="C. Lorem Ipsum" />
+                <RadioButton
+                    android:id="@+id/choice_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="C. Lorem Ipsum" />
+            </TableRow>
 
-            <RadioButton
-                android:id="@+id/choice_d"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="D. Lorem Ipsum" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RadioButton
+                    android:id="@+id/choice_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="B. Lorem Ipsum" />
+
+                <RadioButton
+                    android:id="@+id/choice_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="D. Lorem Ipsum" />
+            </TableRow>
+
         </RadioGroup>
 
         <Button
             android:id="@+id/btn_next_question"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Soal Berikut" />
+            android:background="@android:color/holo_blue_dark"
+            android:text="Soal Berikut"
+            android:textColor="@color/colorTextSecondary" />
 
     </LinearLayout>
 
